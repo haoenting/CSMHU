@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "UTF-8"></meta>
+    <title>CMUH CRS Cancer Database</title>
+    <link rel="stylesheet" href="styles.css?v=1" />
+    <style>
+      .container {
+            display: flex; 
+            justify-content: space-between; /* 在容器内两个元素之间创建空间，使之左右对齐 */
+            align-items: center; 
+        }
+        .container span {
+          margin-right: 15px; 
+        }
+    </style>
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <h1>CSMUH CRS Cancer Database</h1>
+    <hr/>
+      <table style="width: 100%; text-align: center;" cellpadding="10" border="1">
+      <tr>
+        <th id='th1' onclick="isHidden1('div1'); changeColor('th1')" width="10%">基本資料</th>
+        <th id='th2' onclick="isHidden1('div2'); changeColor('th2')"width="10%">過去病史</th>
+        <th id='th3' onclick="isHidden1('div3'); changeColor('th3')"width="10%">初始症狀</th>
+        <th id='th4' onclick="isHidden1('div4'); changeColor('th4')"width="10%">術前評估</th>
+        <th id='th5' onclick="isHidden1('div5'); changeColor('th5')"width="10%">術前處置</th>
+        <th id='th6' onclick="isHidden1('div6'); changeColor('th6')"width="10%">CCRT</th>
+        <th id='th7' onclick="isHidden1('div7'); changeColor('th7')"width="10%">手術</th>
+        <th id='th8' onclick="isHidden1('div8'); changeColor('th8')"width="10%">術後狀況</th>
+        <th id='th9' onclick="isHidden1('div9'); changeColor('th9')"width="10%">病理</th>
+        <th id='th10' onclick="isHidden1('div10'); changeColor('th10')" width="10%">追加追蹤</th>
+      </tr>
+
+      <form method="POST" action="insert.php" >
+      <tr>
+        <td colspan="10" >
+          <!--基本資料 basic-->
+          <div id="div1" style="display:none">
+            <table  cellpadding="10" border="1" >
+            </table>
+          </div>
+
+          <!--過去病史 pass-->
+          <div id="div2" style="display:block">
+            <table cellpadding="10" border="1">
+            </table>
+          </div>
+
+          <!--初始症狀-->
+          <div id="div3" style="display:none">
+            <table cellpadding="10" border="1">
+            </table>
+          </div>
+
+          <!--術前評估-->
+          <div id="div4" style="display:none">
+            <table cellpadding="10" border="1">
+          </table>
+          </div>
+
+          <!--術前處置-->
+          <div id="div5" style="display:none">
+            <table cellpadding="10" border="1">
+            </table>
+          </div>
+
+          <!--CCRT-->
+          <div id="div6" style="display:none">
+            <table cellpadding="10" border="1">
+            </table>
+          </div>
+
+          <!--手術-->
+          <div id="div7" style="display:none">
+            <table cellpadding="10" border="1">
+            </table>
+          </div>
+
+          <!--術後-->
+          <div id="div8" style="display:none">
+            <table cellpadding="10" border="1">
+          </table>
+          </div>
+          
+          <!--病理-->
+          <div id="div9" style="display:none">
+            <table cellpadding="10" border="1">
+            </table>
+          </div>
+
+          <!--追加追蹤-->
+          <div id="div10" style="display:none">
+            <table cellpadding="10" border="1">
+            </table>
+          </div>
+          
+        </td>
+      </tr>
+
+      <tr>
+        <td colspan="10" ><!--新增紀錄 -->
+          <div style="float:left;">
+            <input type="submit" value="儲存紀錄" align="center">
+          </div>
+          
+          <div style="float:right;">
+            <input type="reset" value="重製紀錄" align="right">
+          </div>
+        </td>
+      </tr>
+    </form>
+    </table>
+  
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head> 
+    <meta charset = "UTF-8"></meta>
+    <title>CSMUH CRS Cancer Database</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  
+  <body>
+    <h1>CSMUH CRS Cancer Database</h1>
+    <hr/>
+    <table cellpadding="10" border="1" >
+      <tr>
+        <th colspan="2">紀錄查詢</th>
+      </tr>
+      <tr>
+        <td valign="top">
+          <form method="post" action="modify.php">
+              <select name="choose">  
+                <option value="Chart">Chart</option>
+                <option value="ID">ID</option>
+                <option value="Name">Name</option>
+              </select>
+              <input type="text" name="value" size="12" autocomplete="off" required>
+              <input type="submit" value="查詢" align="center"/>
+              
+          </form>
+          </td>
+        </tr>
+      </table>
+    </body>
+</html>

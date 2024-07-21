@@ -1,0 +1,14 @@
+body {
+  background-color: #c4c4c4;
+  text-align: center;
+}
+h1 {
+  text-align: center;
+}
+form {
+  text-align: left; /* 让form内的内容左对齐 */
+}
+div {
+  line-height: 25px;
+  font-size: 20px;
+}
