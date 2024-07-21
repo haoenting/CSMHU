@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\ValidationException;
 
+use App\Models\Action;
 use App\Models\Basic_information;
 // use App\Models\Past_History;
 // use App\Models\InitialSymptoms;
@@ -18,9 +19,11 @@ use App\Models\Basic_information;
 // use App\Models\Tracking;
 
 class DataController extends Controller{
-    public function test(Request $request){
+    public function insert(Request $request){
         $formData = $request->all();
 
+
+        $username = $formData['username'];
         $basicInfoData = $formData['basicInfo'];
         $pastHistoryData = $formData['pastHistory'];
         $initialSymptomsData = $formData['initialSymptoms'];
@@ -41,6 +44,7 @@ class DataController extends Controller{
                 'message' => '身分證已存在!'
             ], 409); 
         }
+
 
         // $rules = [
         //     'Chart' => 'required|string|max:255',
@@ -79,58 +83,14 @@ class DataController extends Controller{
         ]);
         
 
+        Action::create([
+            'username' => $username,
+            'action' => 'Create '. $basicInfoData['ID'],
+        ]);
+
         return response()->json([
             'success' => true,
             'message' => '資料新增成功!',
         ]);
-    }
-
-    public function insert(Request $request){ 
-        $formData = $request->all();
-
-        $basicInfoData = $formData['basicInfo'];
-        $pastHistoryData = $formData['pastHistory'];
-        $initialSymptomsData = $formData['initialSymptoms'];
-        $preoperativeAssessmentData = $formData['preoperativeAssessment'];
-        $preoperativeTreatmentData = $formData['preoperativeTreatment'];
-        $ccrtData = $formData['ccrt'];
-        $surgeryData = $formData['surgery'];
-        $postoperativeConditionData = $formData['postoperativeCondition'];
-        $pathologyData = $formData['pathology'];
-        $trackingData = $formData['tracking'];
-
-         // 定義醫生表單的驗證規則
-        $rules = [
-            'Chart' => 'required|string|max:255',
-            'ID' => 'required|string|unique:Basic_information',
-            'Name' => 'required|string|max:255',
-        ];
-
-        // 創建驗證器
-        $validator = Validator::make($request->all(), $rules);
-
-        // 如果驗證失敗
-        if ($validator->fails()) {
-            return response()->json(['error' => $validator->errors()], 400);
-        }
-        BasicInformation::create($formData['basicInfo']);
-
-        // try {
-            
-        //     PastHistory::create($formData['basicInfo']);
-        //     InitialSymptoms::create($formData['initialSymptoms']);
-        //     PreoperativeAssessment::create($formData['preoperativeAssessment']);
-        //     PreoperativeTreatment::create($formData['preoperativeTreatment']);
-        //     CCRT::create($formData['ccrt']);
-        //     Surgery::create($formData['surgery']);
-        //     PostoperativeCondition::create($formData['postoperativeCondition']);
-        //     Pathology::create($formData['pathology']);
-        //     Tracking::create($formData['tracking']);
-
-        //     return response()->json(['message' => 'Data stored successfully'], 200);
-
-        // } catch (ValidationException $e) {
-        //     return response()->json(['error' => $e->getMessage()], 400);
-        // }
     }
 }
