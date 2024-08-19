@@ -8,7 +8,7 @@ return new class extends Migration{
     public function up(): void{
         Schema::connection('patient_db')->create('Postoperative_Condition', function (Blueprint $table) {  
             $table->string('basic_information_id');
-            $table->foreign('basic_information_id')->references('ID')->on('Basic_information')->onDelete('cascade');
+            $table->foreign('basic_information_id')->references('Chart')->on('Basic_information')->onDelete('cascade');
             $table->string('Cefazoline2')->nullable()->default('');
             $table->string('Gentamicin2')->nullable()->default('');
             $table->string('Metronidazole2')->nullable()->default('');
@@ -27,7 +27,7 @@ return new class extends Migration{
             $table->string('Complication_other')->nullable()->default('');
             $table->string('Length_of_hospitalization')->nullable()->default('');
             $table->string('Discharge')->nullable()->default('');
-            $table->boolean('Re')->nullable()->default(false);
+            $table->boolean('Re_amission')->nullable()->default(false);
             $table->boolean('Motality')->nullable()->default(false);
         });
     }

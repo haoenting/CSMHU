@@ -8,10 +8,10 @@ return new class extends Migration{
     public function up(): void{
         Schema::connection('patient_db')->create('Initial_Symptoms', function (Blueprint $table) {
             $table->string('basic_information_id');
-            $table->foreign('basic_information_id')->references('ID')->on('Basic_information')->onDelete('cascade');
+            $table->foreign('basic_information_id')->references('Chart')->on('Basic_information')->onDelete('cascade');
             $table->boolean('Stool_OB')->nullable()->default(false);
             $table->boolean('Colonoscocopy')->nullable()->default(false);
-            $table->boolean('CEA1')->nullable()->default(false);
+            $table->boolean('CEA')->nullable()->default(false);
             $table->boolean('CT')->nullable()->default(false);
             $table->boolean('MRI')->nullable()->default(false);
             $table->boolean('PET')->nullable()->default(false);

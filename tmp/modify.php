@@ -212,9 +212,9 @@
                     </datalist>
                   </div><br/>
                   
-                  <input type="checkbox" name="HNPCC" value="yes" <?php echo ($row1['HNPCC'] === 'yes') ? 'checked' : ''; ?> >
+                  <input type="checkbox" name="HNPCC" value="yes" <?php echo ($row1['HNPCC']) ? 'checked' : ''; ?> >
                   <span>HNPCC</span><br/>
-                  <input type="checkbox" name="FAP" value="yes" <?php echo ($row1['FAP'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="FAP" value="yes" <?php echo ($row1['FAP']) ? 'checked' : ''; ?>>
                   <span>FAP</span>
                 </td>
       
@@ -224,7 +224,7 @@
                     <input type="date" name="Date_of_initial_diagnosis"  value="<?php echo $row1['Date_of_initial_diagnosis']; ?>">
                   </div>
 
-                  <input type="checkbox" name="Metastases" value="yes" <?php echo ($row1['Metastases'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Metastases" value="yes" <?php echo ($row1['Metastases']) ? 'checked' : ''; ?>>
                   <span>Metastases</span>
                   
                   <div class="container">
@@ -264,14 +264,14 @@
             <table cellpadding="10" border="1">
               <td valign="top">
                 <u>Medical history</u><br/>
-                <input type="checkbox" name="DM" value="yes" <?php echo ($row2['DM'] === 'yes') ? 'checked' : ''; ?>>DM<br/>
-                <input type="checkbox" name="HTM" value="yes" <?php echo ($row2['HTM'] === 'yes') ? 'checked' : ''; ?>>HTM<br/>
-                <input type="checkbox" name="CVA" value="yes" <?php echo ($row2['CVA'] === 'yes') ? 'checked' : ''; ?>>CVA</span><br/>
-                <input type="checkbox" name="CAD" value="yes" <?php echo ($row2['CAD'] === 'yes') ? 'checked' : ''; ?>>CAD<br/>
-                <input type="checkbox" name="COPD" value="yes" <?php echo ($row2['COPD'] === 'yes') ? 'checked' : ''; ?>>COPD<br/>
-                <input type="checkbox" name="CHF" value="yes" <?php echo ($row2['CHF'] === 'yes') ? 'checked' : ''; ?>>CHF<br/>
-                <input type="checkbox" name="Liver_cirrhosis" value="yes" <?php echo ($row2['Liver_cirrhosis'] === 'yes') ? 'checked' : ''; ?>>Liver cirrhosis<br/>
-                <input type="checkbox" name="Gout" value="yes" <?php echo ($row2['Gout'] === 'yes') ? 'checked' : ''; ?>>Gout<br/>
+                <input type="checkbox" name="DM" value="yes" <?php echo ($row2['DM']) ? 'checked' : ''; ?>>DM<br/>
+                <input type="checkbox" name="HTM" value="yes" <?php echo ($row2['HTM']) ? 'checked' : ''; ?>>HTM<br/>
+                <input type="checkbox" name="CVA" value="yes" <?php echo ($row2['CVA']) ? 'checked' : ''; ?>>CVA</span><br/>
+                <input type="checkbox" name="CAD" value="yes" <?php echo ($row2['CAD']) ? 'checked' : ''; ?>>CAD<br/>
+                <input type="checkbox" name="COPD" value="yes" <?php echo ($row2['COPD']) ? 'checked' : ''; ?>>COPD<br/>
+                <input type="checkbox" name="CHF" value="yes" <?php echo ($row2['CHF']) ? 'checked' : ''; ?>>CHF<br/>
+                <input type="checkbox" name="Liver_cirrhosis" value="yes" <?php echo ($row2['Liver_cirrhosis']) ? 'checked' : ''; ?>>Liver cirrhosis<br/>
+                <input type="checkbox" name="Gout" value="yes" <?php echo ($row2['Gout']) ? 'checked' : ''; ?>>Gout<br/>
                 <span>Others : </span>
                 <input type="text" name="MD_other" value="<?php echo $row2['MD_other']; ?>">
               </td>
@@ -322,16 +322,16 @@
               
               <td valign="top">
                 <u>Family Hx of CRC</u><br/>
-                <input type="checkbox" name="Family_CRC_1" value="yes" <?php echo ($row2['Family_CRC_1'] === 'yes') ? 'checked' : ''; ?>>
+                <input type="checkbox" name="Family_CRC_1" value="yes" <?php echo ($row2['Family_CRC_1']) ? 'checked' : ''; ?>>
                 <span>1 st degree</span><br/>
-                <input type="checkbox" name="Family_CRC_2" value="yes" <?php echo ($row2['Family_CRC_2'] === 'yes') ? 'checked' : ''; ?>>
+                <input type="checkbox" name="Family_CRC_2" value="yes" <?php echo ($row2['Family_CRC_2']) ? 'checked' : ''; ?>>
                 <span>2 nd degree</span><br/>
-                <input type="checkbox" name="Family_CRC_3" value="yes" <?php echo ($row2['Family_CRC_3'] === 'yes') ? 'checked' : ''; ?>>
+                <input type="checkbox" name="Family_CRC_3" value="yes" <?php echo ($row2['Family_CRC_3']) ? 'checked' : ''; ?>>
                 <span>3 rd degree</span><br/>
                 <br/>
 
                 <u>Family Hx of other cancer</u><br/>
-                <input type="checkbox" name="Family_GI_cancer" value="yes" <?php echo ($row2['Family_GI_cancer'] === 'yes') ? 'checked' : ''; ?>>
+                <input type="checkbox" name="Family_GI_cancer" value="yes" <?php echo ($row2['Family_GI_cancer']) ? 'checked' : ''; ?>>
                 <span>GI cancer</span>
                 <br/>
                 <span>Other cancer : </span><br/>
@@ -346,45 +346,45 @@
               <tr>
                 <td valign="top">
                   <u>Asymptomatic</u><br/>
-                  <input type="checkbox" name="Stool_OB" value="yes" <?php echo ($row3['Stool_OB'] === 'yes') ? 'checked' : ''; ?>>Stool OB<br/>
-                  <input type="checkbox" name="Colonoscocopy" value="yes" <?php echo ($row3['Colonoscocopy'] === 'yes') ? 'checked' : ''; ?>>Colonoscocopy<br/>
-                  <input type="checkbox" name="CEA" value="yes" <?php echo ($row3['CEA'] === 'yes') ? 'checked' : ''; ?>>CEA<br/>
-                  <input type="checkbox" name="CT" value="yes" <?php echo ($row3['CT'] === 'yes') ? 'checked' : ''; ?>>CT<br/>
-                  <input type="checkbox" name="MRI" value="yes" <?php echo ($row3['MRI'] === 'yes') ? 'checked' : ''; ?>>MRI<br/>
-                  <input type="checkbox" name="PET" value="yes" <?php echo ($row3['PET'] === 'yes') ? 'checked' : ''; ?>>PET<br/>
+                  <input type="checkbox" name="Stool_OB" value="yes" <?php echo ($row3['Stool_OB']) ? 'checked' : ''; ?>>Stool OB<br/>
+                  <input type="checkbox" name="Colonoscocopy" value="yes" <?php echo ($row3['Colonoscocopy']) ? 'checked' : ''; ?>>Colonoscocopy<br/>
+                  <input type="checkbox" name="CEA" value="yes" <?php echo ($row3['CEA']) ? 'checked' : ''; ?>>CEA<br/>
+                  <input type="checkbox" name="CT" value="yes" <?php echo ($row3['CT']) ? 'checked' : ''; ?>>CT<br/>
+                  <input type="checkbox" name="MRI" value="yes" <?php echo ($row3['MRI']) ? 'checked' : ''; ?>>MRI<br/>
+                  <input type="checkbox" name="PET" value="yes" <?php echo ($row3['PET']) ? 'checked' : ''; ?>>PET<br/>
                   <br/><br />
 
                   <u>Blood passage from anv</u><br/>
-                  <input type="checkbox" name="Fresh_blood" value="yes" <?php echo ($row3['Fresh_blood'] === 'yes') ? 'checked' : ''; ?>>Fresh blood<br/>
-                  <input type="checkbox" name="Bloody_stool" value="yes" <?php echo ($row3['Bloody_stool'] === 'yes') ? 'checked' : ''; ?>>Bloody stool<br/>
-                  <input type="checkbox" name="Melanoma" value="yes" <?php echo ($row3['Melanoma'] === 'yes') ? 'checked' : ''; ?>>Melanoma<br/>
+                  <input type="checkbox" name="Fresh_blood" value="yes" <?php echo ($row3['Fresh_blood']) ? 'checked' : ''; ?>>Fresh blood<br/>
+                  <input type="checkbox" name="Bloody_stool" value="yes" <?php echo ($row3['Bloody_stool']) ? 'checked' : ''; ?>>Bloody stool<br/>
+                  <input type="checkbox" name="Melanoma" value="yes" <?php echo ($row3['Melanoma']) ? 'checked' : ''; ?>>Melanoma<br/>
                 </td>
                 
                 <td valign="top">
                   <u>Changing in bowel habit</u><br/>
-                  <input type="checkbox" name="Small_caliber_of_stool" value="yes" <?php echo ($row3['Small_caliber_of_stool'] === 'yes') ? 'checked' : ''; ?>>Small caliber of stool<br/>
-                  <input type="checkbox" name="Tenesmus" value="yes" <?php echo ($row3['Tenesmus'] === 'yes') ? 'checked' : ''; ?>>Tenesmus<br/>
-                  <input type="checkbox" name="Constipation" value="yes" <?php echo ($row3['Constipation'] === 'yes') ? 'checked' : ''; ?>>Constipation<br/>
-                  <input type="checkbox" name="Diarrhea" value="yes" <?php echo ($row3['Diarrhea'] === 'yes') ? 'checked' : ''; ?>>Diarrhea<br/>
-                  <input type="checkbox" name="Mucus_passage" value="yes" <?php echo ($row3['Mucus_passage'] === 'yes') ? 'checked' : ''; ?>>Mucus passage<br/>
+                  <input type="checkbox" name="Small_caliber_of_stool" value="yes" <?php echo ($row3['Small_caliber_of_stool']) ? 'checked' : ''; ?>>Small caliber of stool<br/>
+                  <input type="checkbox" name="Tenesmus" value="yes" <?php echo ($row3['Tenesmus']) ? 'checked' : ''; ?>>Tenesmus<br/>
+                  <input type="checkbox" name="Constipation" value="yes" <?php echo ($row3['Constipation']) ? 'checked' : ''; ?>>Constipation<br/>
+                  <input type="checkbox" name="Diarrhea" value="yes" <?php echo ($row3['Diarrhea']) ? 'checked' : ''; ?>>Diarrhea<br/>
+                  <input type="checkbox" name="Mucus_passage" value="yes" <?php echo ($row3['Mucus_passage']) ? 'checked' : ''; ?>>Mucus passage<br/>
                   <br/><br />
 
                   <u>Abdomen discomfor</u><br/>
-                  <input type="checkbox" name="Abdomen_pain" value="yes" <?php echo ($row3['Abdomen_pain'] === 'yes') ? 'checked' : ''; ?>>Abdomen pain<br/>
-                  <input type="checkbox" name="Abdomen_distention" value="yes" <?php echo ($row3['Abdomen_distention'] === 'yes') ? 'checked' : ''; ?>>Abdomen distention<br/>
-                  <input type="checkbox" name="Abdomen_fullness" value="yes" <?php echo ($row3['Abdomen_fullness'] === 'yes') ? 'checked' : ''; ?>>Abdomen fullness<br/>
-                  <input type="checkbox" name="Abdomen_mass" value="yes" <?php echo ($row3['Abdomen_mass'] === 'yes') ? 'checked' : ''; ?>>Abdomen mass<br/>
+                  <input type="checkbox" name="Abdomen_pain" value="yes" <?php echo ($row3['Abdomen_pain']) ? 'checked' : ''; ?>>Abdomen pain<br/>
+                  <input type="checkbox" name="Abdomen_distention" value="yes" <?php echo ($row3['Abdomen_distention']) ? 'checked' : ''; ?>>Abdomen distention<br/>
+                  <input type="checkbox" name="Abdomen_fullness" value="yes" <?php echo ($row3['Abdomen_fullness']) ? 'checked' : ''; ?>>Abdomen fullness<br/>
+                  <input type="checkbox" name="Abdomen_mass" value="yes" <?php echo ($row3['Abdomen_mass']) ? 'checked' : ''; ?>>Abdomen mass<br/>
                 </td>
 
                 <td valign="top">
                   <u>Generalized condition change</u><br/>
-                  <input type="checkbox" name="Vomiting" value="yes" <?php echo ($row3['Vomiting'] === 'yes') ? 'checked' : ''; ?>>Vomiting<br/>
-                  <input type="checkbox" name="Loss_appetite" value="yes" <?php echo ($row3['Loss_appetite'] === 'yes') ? 'checked' : ''; ?>>Loss appetite<br/>
-                  <input type="checkbox" name="Anemia" value="yes" <?php echo ($row3['Anemia'] === 'yes') ? 'checked' : ''; ?>>Anemia<br/>
+                  <input type="checkbox" name="Vomiting" value="yes" <?php echo ($row3['Vomiting']) ? 'checked' : ''; ?>>Vomiting<br/>
+                  <input type="checkbox" name="Loss_appetite" value="yes" <?php echo ($row3['Loss_appetite']) ? 'checked' : ''; ?>>Loss appetite<br/>
+                  <input type="checkbox" name="Anemia" value="yes" <?php echo ($row3['Anemia']) ? 'checked' : ''; ?>>Anemia<br/>
                   Body weight loss : <input type="text" name="weight_loss" size="1" value="<?php echo $row3['weight_loss']; ?>"> KG<br/>
                   <br/>
 
-                  <input type="checkbox" name="Peritonitis" value="yes" <?php echo ($row3['Peritonitis'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Peritonitis" value="yes" <?php echo ($row3['Peritonitis']) ? 'checked' : ''; ?>>
                   <u>Peritonitis</u>
                   <br/><br/>
 
@@ -547,7 +547,7 @@
                       </datalist>
                   </div><br/>
 
-                  <input type="checkbox" name="MRI2" value="yes" <?php echo ($row4['MRI'] === 'yes') ? 'checked' : ''; ?>>MRI<br/><br/>
+                  <input type="checkbox" name="MRI2" value="yes" <?php echo ($row4['MRI']) ? 'checked' : ''; ?>>MRI<br/><br/>
 
                   <div class="container">
                     <u>PET scan :</u>
@@ -626,7 +626,7 @@
                     <input type="text" name="Distence_from_AV" size="3" value="<?php echo $row4['Distence_from_AV']; ?>"> CM
                   </div><br/><br/>
 
-                  <input type="checkbox" name="Polyps1" value="yes" <?php echo ($row4['Polyps1'] === 'yes') ? 'checked' : ''; ?>>Polyps<br/>
+                  <input type="checkbox" name="Polyps1" value="yes" <?php echo ($row4['Polyps1']) ? 'checked' : ''; ?>>Polyps<br/>
                   <br/>
 
                   <u>Radiology</u><br/>
@@ -643,16 +643,16 @@
                   </div><br/>
 
                   <u>Abdominal CT</u><br/>
-                  <input type="checkbox" value="yes" name="Wall_thickening" <?php echo ($row4['Wall_thickening'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" value="yes" name="Wall_thickening" <?php echo ($row4['Wall_thickening']) ? 'checked' : ''; ?>>
                   <span>Wall thickening</span>
                   <br/>
-                  <input type="checkbox" value="yes" name="Involving_adjvcent_organ" <?php echo ($row4['Involving_adjvcent_organ'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" value="yes" name="Involving_adjvcent_organ" <?php echo ($row4['Involving_adjvcent_organ']) ? 'checked' : ''; ?>>
                   <span>Involving adjvcent organ</span>
                   <br/>
-                  <input type="checkbox"value="yes" name="LN_enlargement" <?php echo ($row4['LN_enlargement'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox"value="yes" name="LN_enlargement" <?php echo ($row4['LN_enlargement']) ? 'checked' : ''; ?>>
                   <span>LN enlargement</span>
                   <br/>
-                  <input type="checkbox"value="yes" name="Liver_lodules" <?php echo ($row4['Liver_lodules'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox"value="yes" name="Liver_lodules" <?php echo ($row4['Liver_lodules']) ? 'checked' : ''; ?>>
                   <span>Liver lodules</span>
                   <br/>
                   <span>Other : </span>
@@ -672,7 +672,7 @@
                     </datalist>
                   </div>
 
-                  <input type="checkbox" name="Polyps2" value="yes"  <?php echo ($row4['Polyps2'] === 'yes') ? 'checked' : ''; ?>>Polyps
+                  <input type="checkbox" name="Polyps2" value="yes"  <?php echo ($row4['Polyps2']) ? 'checked' : ''; ?>>Polyps
                   <br/><br/>
 
                   <div class="container">
@@ -712,11 +712,11 @@
               <tr>
                 <td valign="top">
                   <u>Nutrition support</u><br/>
-                  <input type="checkbox" name="Albumin2" value="yes" <?php echo ($row5['Albumin'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Albumin2" value="yes" <?php echo ($row5['Albumin']) ? 'checked' : ''; ?>>
                   <span>Albumin</span><br/>
-                  <input type="checkbox" name="PPN" value="yes" <?php echo ($row5['PPN'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="PPN" value="yes" <?php echo ($row5['PPN']) ? 'checked' : ''; ?>>
                   <span>PPN</span><br/>
-                  <input type="checkbox" name="TPN" value="yes" <?php echo ($row5['TPN'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="TPN" value="yes" <?php echo ($row5['TPN']) ? 'checked' : ''; ?>>
                   <span>TPN</span><br/>
                   <span>days : </span> 
                   <input type="text" name="days" size="3" value="<?php echo $row5['days']?>"><br/><br/>
@@ -805,21 +805,21 @@
                     </datalist>
                   </div>
 
-                  <input type="checkbox" name="Oral_antibiotics" value="yes" <?php echo ($row5['Oral_antibiotics'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Oral_antibiotics" value="yes" <?php echo ($row5['Oral_antibiotics']) ? 'checked' : ''; ?>>
                   <span>Oral antibiotics</span>
                   <br/>
-                  <input type="checkbox" name="Retention_enema" value="yes" <?php echo ($row5['Retention_enema'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Retention_enema" value="yes" <?php echo ($row5['Retention_enema']) ? 'checked' : ''; ?>>
                   <span>Retention enema</span>
                   <br/><br/>
                   
                   <u>Pre-OP Antibiotics</u><br/>
-                  <input type="checkbox" name="Cafazolin" value="yes" <?php echo ($row5['Cafazolin'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Cafazolin" value="yes" <?php echo ($row5['Cafazolin']) ? 'checked' : ''; ?>>
                   <span>Cafazolin (1 g)</span>
                   <br/>
-                  <input type="checkbox" name="Gentamicin" value="yes" <?php echo ($row5['Gentamicin'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Gentamicin" value="yes" <?php echo ($row5['Gentamicin']) ? 'checked' : ''; ?>>
                   <span>Gentamicin (80 mg)</span>
                   <br/>
-                  <input type="checkbox" name="Metronidazole" value="yes" <?php echo ($row5['Metronidazole'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Metronidazole" value="yes" <?php echo ($row5['Metronidazole']) ? 'checked' : ''; ?>>
                   <span>Metronidazole (500 mg)</span>
                   <br/>
                   <div class="container">
@@ -836,9 +836,9 @@
             <table cellpadding="10" border="1">
               <td valign="top">
                 <u>Neoadjavent C/T</u><br/>
-                <input type="checkbox" name="UFT" value="yes" <?php echo ($row6['UFT'] === 'yes') ? 'checked' : ''; ?>>
+                <input type="checkbox" name="UFT" value="yes" <?php echo ($row6['UFT']) ? 'checked' : ''; ?>>
                 <span>UFT</span><br/>
-                <input type="checkbox" name="Xeloda" value="yes" <?php echo ($row6['Xeloda'] === 'yes') ? 'checked' : ''; ?>>
+                <input type="checkbox" name="Xeloda" value="yes" <?php echo ($row6['Xeloda']) ? 'checked' : ''; ?>>
                 <span>Xeloda</span><br/>
                 <br/>
 
@@ -1034,7 +1034,7 @@
                     </datalist>
                   </div>
 
-                  <input type="checkbox" name="Peritoneal_seeding" value="yes" <?php echo ($row7['Peritoneal_seeding'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Peritoneal_seeding" value="yes" <?php echo ($row7['Peritoneal_seeding']) ? 'checked' : ''; ?>>
                   <span>Peritoneal seeding</span>
                 </td>
 
@@ -1116,15 +1116,15 @@
                     </datalist>
                   </div>
 
-                  <input type="checkbox" name="Perforation" value="yes" <?php echo ($row7['Perforation'] === 'yes') ? 'checked' : ''; ?>>Perforation<br/>
-                  <input type="checkbox" name="Obstruction2" value="yes" <?php echo ($row7['Obstruction'] === 'yes') ? 'checked' : ''; ?>>Obstruction
+                  <input type="checkbox" name="Perforation" value="yes" <?php echo ($row7['Perforation']) ? 'checked' : ''; ?>>Perforation<br/>
+                  <input type="checkbox" name="Obstruction2" value="yes" <?php echo ($row7['Obstruction']) ? 'checked' : ''; ?>>Obstruction
                 </td>
 
                 <td valign="top">
                   <u>Invasion to other structure :</u><br/>
                   <textarea name="Invasion_other" cols="30" rows="3"><?php echo $row7['Invasion_other']; ?></textarea>
                   <br/>
-                  <input type="checkbox" name="Combined_resection" value="yes" <?php echo ($row7['Combined_resection'] === 'yes') ? 'checked' : ''; ?>>
+                  <input type="checkbox" name="Combined_resection" value="yes" <?php echo ($row7['Combined_resection']) ? 'checked' : ''; ?>>
                   <span>Combined resection</span>
                   <br/><br/>
 
@@ -1180,7 +1180,7 @@
                     </datalist>
                   </div>
 
-                  <input type="checkbox" name="Intracolonic" value="yes" <?php echo ($row7['Intracolonic'] === 'yes') ? 'checked' : ''; ?>>Intracolonic irrigation
+                  <input type="checkbox" name="Intracolonic" value="yes" <?php echo ($row7['Intracolonic']) ? 'checked' : ''; ?>>Intracolonic irrigation
                   <br/><br/>
 
                   <u>Reason of palliative TX : </u><br/>
@@ -1335,8 +1335,8 @@
                   <input type="text" name="Discharge" size="5" value="<?php echo $row8['Discharge'] ; ?>">
                 </div><br/>
 
-                <input type="checkbox" name="Re" value="yes" <?php echo ($row8['Re-admission'] === 'yes') ? 'checked' : ''; ?>>Re-admission within 14 days<br/>
-                <input type="checkbox" name="Motality" value="yes" <?php echo ($row8['Motality'] === 'yes') ? 'checked' : ''; ?>>Motality within 30 days
+                <input type="checkbox" name="Re" value="yes" <?php echo ($row8['Re-admission']) ? 'checked' : ''; ?>>Re-admission within 14 days<br/>
+                <input type="checkbox" name="Motality" value="yes" <?php echo ($row8['Motality']) ? 'checked' : ''; ?>>Motality within 30 days
               </td>
           </table>
           </div>
@@ -1412,14 +1412,14 @@
                   </datalist>
                 </div>
 
-                <input type="checkbox" name="Lypmhatic" value="yes" <?php echo ($row9['Lypmhatic_invasion'] === 'yes') ? 'checked' : ''; ?>> Lypmhatic invasion<br/>
-                <input type="checkbox" name="Vascular" value="yes" <?php echo ($row9['Vascular_invasion'] === 'yes') ? 'checked' : ''; ?>> Vascular invasion<br/>
-                <input type="checkbox" name="Perineural" value="yes" <?php echo ($row9['Perineural_invasion'] === 'yes') ? 'checked' : ''; ?>> Perineural invasion<br/>
+                <input type="checkbox" name="Lypmhatic" value="yes" <?php echo ($row9['Lypmhatic_invasion']) ? 'checked' : ''; ?>> Lypmhatic invasion<br/>
+                <input type="checkbox" name="Vascular" value="yes" <?php echo ($row9['Vascular_invasion']) ? 'checked' : ''; ?>> Vascular invasion<br/>
+                <input type="checkbox" name="Perineural" value="yes" <?php echo ($row9['Perineural_invasion']) ? 'checked' : ''; ?>> Perineural invasion<br/>
                 
               </td>
               <td valign="top">
-                <input type="checkbox" name="Synchronous_Polypo" value="yes" <?php echo ($row9['Synchronous_polypo'] === 'yes') ? 'checked' : ''; ?>> <u>Synchronous polypo</u><br/>
-                <input type="checkbox" name="Synchronous_cancer" value="yes" <?php echo ($row9['Synchronous_cancer'] === 'yes') ? 'checked' : ''; ?>> <u>Synchronous cancer</u>
+                <input type="checkbox" name="Synchronous_Polypo" value="yes" <?php echo ($row9['Synchronous_polypo']) ? 'checked' : ''; ?>> <u>Synchronous polypo</u><br/>
+                <input type="checkbox" name="Synchronous_cancer" value="yes" <?php echo ($row9['Synchronous_cancer']) ? 'checked' : ''; ?>> <u>Synchronous cancer</u>
                 <br/> <br/>
 
                 <div class="container">

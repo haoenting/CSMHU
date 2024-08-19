@@ -8,7 +8,7 @@ return new class extends Migration{
     public function up(): void{
         Schema::connection('patient_db')->create('Pathology', function (Blueprint $table) {  
             $table->string('basic_information_id');
-            $table->foreign('basic_information_id')->references('ID')->on('Basic_information')->onDelete('cascade');
+            $table->foreign('basic_information_id')->references('Chart')->on('Basic_information')->onDelete('cascade');
             $table->string('Tumor_long2')->nullable()->default('');
             $table->string('Tumor_wide2')->nullable()->default('');
             $table->string('Tumor_high2')->nullable()->default('');

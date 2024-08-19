@@ -10,4 +10,6 @@ Route::post('/register', [UserController::class, 'register']);
 Route::get('/getAction', [UserController::class, 'getAction']);
 
 Route::post('/insert', [DataController::class, 'insert']);
-
+Route::get('/getData/{id}', [DataController::class, 'getData']);
+Route::get('/getPatient', [DataController::class, 'getPatient']);
+Route::post('/modify', [DataController::class, 'modify']);

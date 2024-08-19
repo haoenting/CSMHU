@@ -8,7 +8,7 @@ return new class extends Migration{
     public function up(): void{
         Schema::connection('patient_db')->create('Surgery', function (Blueprint $table) {  
             $table->string('basic_information_id');
-            $table->foreign('basic_information_id')->references('ID')->on('Basic_information')->onDelete('cascade');
+            $table->foreign('basic_information_id')->references('Chart')->on('Basic_information')->onDelete('cascade');
             $table->date('Operatin_date')->nullable();
             $table->string('OP_method1')->nullable()->default('');
             $table->string('OP_method2')->nullable()->default('');

@@ -10,6 +10,4 @@ class Action extends Model{
     protected $fillable = [
         'username', 'action'
     ];
-
-   
 }

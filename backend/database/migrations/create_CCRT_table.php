@@ -8,7 +8,7 @@ return new class extends Migration{
     public function up(): void{
         Schema::connection('patient_db')->create('CCRT', function (Blueprint $table) {  
             $table->string('basic_information_id');
-            $table->foreign('basic_information_id')->references('ID')->on('Basic_information')->onDelete('cascade');
+            $table->foreign('basic_information_id')->references('Chart')->on('Basic_information')->onDelete('cascade');
             $table->boolean('UFT')->nullable()->default(false);
             $table->boolean('Xeloda')->nullable()->default(false);
             $table->string('Neoadjavent_dose')->nullable()->default('');

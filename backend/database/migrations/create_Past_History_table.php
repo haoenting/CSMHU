@@ -9,7 +9,7 @@ return new class extends Migration{
 
         Schema::connection('patient_db')->create('Past_History', function (Blueprint $table) {
             $table->string('basic_information_id');
-            $table->foreign('basic_information_id')->references('ID')->on('Basic_information')->onDelete('cascade');
+            $table->foreign('basic_information_id')->references('Chart')->on('Basic_information')->onDelete('cascade');
             $table->boolean('DM')->nullable()->default(false);
             $table->boolean('HTM')->nullable()->default(false);
             $table->boolean('CVA')->nullable()->default(false);

@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Schema;
 return new class extends Migration{
     public function up(): void{
         Schema::connection('patient_db')->create('Basic_information', function (Blueprint $table) {
-            $table->string('Chart'); // 病例號
-            $table->string('ID')->primary(); // 身分證
-            $table->string('Name');
+            $table->string('Chart')->primary(); // 病例號
+            $table->string('ID')->nullable();// 身分證
+            $table->string('Name')->nullable();
             $table->date('Birthday')->nullable();
             $table->string('Gender')->nullable()->default('');
             $table->string('Native')->nullable()->default('');
@@ -24,7 +24,7 @@ return new class extends Migration{
             $table->date('Date_of_metastases_noted')->nullable();
             $table->date('Time_of_last_follow')->nullable();
             $table->date('Date_of_mortality')->nullable();
-            $table->date('Survival_time')->nullable();
+            $table->string('Survival_time')->nullable();
             $table->string('DT_summary')->nullable()->default('');
             $table->string('creater')->nullable()->default('');
             $table->timestamps();

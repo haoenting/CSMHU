@@ -92,7 +92,7 @@ class UserController extends Controller{
             'username' => $employee->username,
         ]);
     }
-    public function getAction(Request $request){
+    public function getAction(){
         $actions = Action::orderBy('created_at', 'desc')->take(15)->get();
 
         return response()->json($actions);
